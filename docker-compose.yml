@@ -1,0 +1,8 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - ./downloads:/app/downloads
+      # - ./cookies.txt:/app/cookies.txt:ro   # и COOKIES_FILE=/app/cookies.txt в .env
